@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>hhaaa</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+    <h1>Danh sách user</h1>
+<p>Hiển thị</p>
+<h2 style="background: aqua;font-size: large"><%=name%></h2>
+<%for(var i = 0;i<data.length;i++){%>
+<div><%= data[i].id %></div>
+<div><%= data[i].name %></div>
+<div><%= data[i].age %></div>
+    <br>
+<%}%>
+<!--    form cho phép nhập giá trị và gửi vào request ten: createUser-->
+<form action="/createUser" method="POST" enctype="application/x-www-form-urlencoded">
+    <div style="display:flex; flex-direction: column;flex:auto;gap: 10px">
+    <input type="text" name="name" placeholder="name">
+    <input type="text" name="age" placeholder="age">
+    <button type="submit">Add User</button>
+    </div>
+</form>
+</body>
+</html>
